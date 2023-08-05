@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelli's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,300;1,100;1,200&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: rgb(0, 0, 33); 
+            color: white;
+        }
+        nav{
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        
+
+        }
+        nav ul{
+            display:flex;
+            justify-content:center;
+            
+
+        }
+        nav ul li{
+            list-style: none;
+            
+            margin:0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            
+            color: rgb(153,153,226);
+            font-size: 1.04rem;
+        }
+        main hr{
+            border: 0;
+            background: blueviolet;
+            height:1.2px;
+            margin: 60px 84px;
+        }
+        .left{
+            font-size: 1.5em;    /* the text inside the element with the class "leftsection" will have a font size of 1.5 times its parent element's font size*/
+        }
+        .firstsection{
+            display:flex;
+            justify-content:space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+        .firstsection > div{
+            width: 30%;            /* the width of each <div> element inside the element with the class "firstsection" will be set to 30% of the parent element's width.*/
+        }
+        .leftsection {
+            font-size: 3rem;     /* This sets the font size of the "leftsection" element's text to 3 times the size of the root element's font size.*/
+            margin: 70px 0;       /* This sets the top and bottom margins of the "leftsection" element to 30 pixels and the left and right margins to 0 pixels. */
+        }
+        .leftsection .buttons{
+            padding: 50px 0;
+        }
+        
+        .leftsection .btn a{
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border:2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.10sec ;
+        }
+
+        img{
+            width: 100%;          
+         
+        }
+        .purple{
+            color: blueviolet;
+
+        }
+        .textgray{
+             color: gray;
+        }
+        #element{
+            color: blueviolet;
+        }
+        .secondsection{
+            margin:auto;
+            max-width: 80vw;
+            height:120vh;
+        }
+        .secondsection h1{
+            font-size: 1.9rem;
+        }
+        .secondsection .box{
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display:flex;
+        }
+        .secondsection .vertical{
+            background-color: white;
+            width:1px;
+            height: 93px;
+            margin: 0 6vw;
+            
+        }
+        .links{
+            
+            color: blueviolet;
+
+        }
+        /*.image-top{
+            width: 23px;
+            position: relative;
+            top:-32px;
+            left:-9px;
+        }
+        */
+        
+        .vertical-title{
+            position: relative;
+            top:75px;
+            width: 150px;
+        }
+        .vertical-title2{
+            position: relative;
+            top: 90px;
+            width: 150px;
+        }
+        .vertical-title3{
+            position: relative;
+            top: 92px;
+            width: 150px;
+        }
+        .vertical-desc{
+            position: relative;
+            top:100px;
+            width: 150px;
+            color: gray;
+            font-size: 15px;
+        }
+        footer{
+           background-color: #0e0e1a;
+
+        }
+        .footer{
+            display:flex;
+            padding:23px 122px;
+            justify-content: space-evenly;
+            
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer>div{
+            width: 233px;
+        }
+        footer .footer_rights{
+            text-align: center;
+            
+            padding: 12px 0;
+
+        }
+        @media screen and (max-width:1400px) {
+            header{
+                width:2500px;
+            }
+            
+              
+             .footer{
+                margin-top: 4500px;
+                font-size: 25px;
+                padding-right: 10px;
+                justify-content: flex-start;
+             }
+            footer .footer_rights{
+                text-align:start;
+                padding-left: 100px;
+               
+                font-size: 25px;
+             }
+
+            .firstsection{
+                flex-direction: column-reverse;
+            }
+            #project{
+                font-size: 50px;
+                margin-right:1000px ;
+            }
+            .textgray{
+                margin-right:1000px ;
+                width: max-content;
+            }
+            
+            
+                
+
+            .vertical-title{
+                left:10px;
+                font-size: 40px;
+                width:300px;
+                
+                
+               
+            }
+            .vertical-title2{
+                left:25px;
+                font-size: 30px;
+                width:300px;
+                
+            }
+            .vertical-title3{
+                left:25px;
+                font-size: 25px;
+                width:300px;
+                
+                
+            }
+            .vertical-desc{
+                left: 25px;
+                padding-bottom: 50px;
+                width:300px;
+                font-size: 28px;
+                
+            }
+            .secondsection .vertical{
+                height: unset;/*  By using "unset" for the height property, you are removing any previously set height value and allowing the element to take its natural height based on its content or other CSS rules applied to it.*/
+            }
+            .secondsection .box{
+                width: 20px;
+                height: 2px;
+                flex-direction: column;
+                padding-right: 1100px;
+
+                
+                
+            }
+            nav{
+                flex-direction: column;
+                height: 150px;
+                font-size: 30px;
+               
+                
+
+            }
+            .left{
+                margin-right:1000px ;
+            }
+            .right{
+                margin-right:1000px ;
+            }
+           
+           
+            .leftsection{
+                width: 100% ;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-right:1000px ;
+
+            }
+            .rightsection{
+                width: 721px ;
+                display: flex;
+                justify-content: center;
+            }
+            .rightsection img{
+                width: 45vw;
+                margin-bottom: 73px;
+                margin-right:1000px ;
+            }
+            .secondsection{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            body{
+                min-width:fit-content;
+            }
+            
+
+        }
+         
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Gellileo's portfolio</div>
+            <div class="right">
+                <ul>
+                    <li> <a href="/">Home</a></li>
+                    <li> <a href="/">About</a></li>
+                    <li> <a href="/">Services</a></li>
+                    <li> <a href="/">Projects</a></li>
+                    <li> <a href="/">Contact me</a></li>
+                    
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                <div>Hi, I am <span class="purple">Gellileo</span></div>
+                <div>and I am a Passionate </div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="Gellileo_cv_nitw.pdf" target="_blank">Download Resume</a></button>
+                    <button class="btn"><a href="https://www.linkedin.com/in/gellileo-mittakola-237141246" target="_blank">LinkedIn</a></button>
+                    <button class="btn"><a href="https://github.com/gellileo" target="_blank">Github</a></button>
+                
+                    </div>
+                
+            </div>
+        
+        
+        
+
+    
+             <div class="rightsection"><img src="IMG_20220516_212934_270.jpg" alt=""></div>  
+       
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="textgray">What I have done so far</span>
+            <h1 id="project">PROJECTS</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">*  MACHINE LEARNING PROJECT</div>
+                    <div class="vertical-title2">PREDICTION OF PROJECTED SCORE IN A CRICKET MATCH.</div>
+                    <div class="vertical-desc">*  Built a machine learning model which predicts the projected score and projected score range in any phase of a given match.</div>
+                </div>
+                <div class="vertical">
+                     <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">*  PYTHON PROJECT-1</div>
+                    <div class="vertical-title2">SACHIN VS KOHLI [Pandas,numpy,matplotlib]</div>
+                    <div class="vertical-desc">*  Analyzed the data of SACHIN and KOHLI by using python libraries. 
+                       <p>*  Decoded the winner of <b>SACHIN vs KOHLI</b> by analyzing KPIs and visualizations and presented all the results and conclusions in a microsoft powerpoint. </p>
+                       <p>*  Also decoded the winner of one of the all time IPL greats <b>ABD vs BUMRAH</b> in IPL. </p>
+                       <a href="SACHIN VS KOHLI.ppsx" target="_blank" class="links">SACHIN VS KOHLI</a>
+                       <a href="ABD VS BUMRAH.ppsx" target="_blank" class="links">ABD VS BUMRAH</a>
+                    </div>   
+                </div>
+                <div class="vertical">
+                     <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">*  PYTHON PROJECT-2  </div>
+                    <div class="vertical-title2">IS DHONI STILL GOOD ENOUGH TO BAT ?[Pandas,numpy,matplotlib]</div>
+                    <div class="vertical-desc">*  Analyzed the past 3 years data of <b>MS DHONI</b> and extracted key insights by using python libraries.
+                        <p>*  Concluded whether MSD is still good enough to play IPL and presented all the results and conclusions in a microsoft powerpoint .</p>
+                        <a href="IS MS DHONI STILL GOOD ENOUGH TO BAT.ppsx" target="_blank" class="links">MSD REPORT</a>
+                    </div>
+                </div>
+                <div class="vertical">
+                     <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">*  POWER BI PROJECT-1</div>
+                    <div class="vertical-title2">SALES INSIGHTS[POWER BI | SQL]</div>
+                    <div class="vertical-desc">*  Designed a Power BI dashboard to understand AtliQ hardware goods
+                        sales trend.
+                        <P>*  The final dashboard was effective at displaying the sales trend of
+                        AtliQ hardware, allowing users to understand the data and make
+                        informed decisions.</P>
+                        <P>*  This dashboard could help in increasing the revenue at least by 7% in
+                        the next quarter.
+                    </P>
+                    <a href="powerbip1done.pbix" target="_blank" class="links">DASHBOARD</a>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">*  POWER BI PROJECT-2</div>
+                    <div class="vertical-title2">HR DATA ANALYTICS</div>
+                    <div class="vertical-desc">*  Designed a Power BI dashboard to track employee data for the HR
+                        team, including working hours, attendance, performance, and leaves.
+                        <P>*  The dashboard streamlined HR processes and increased efficiency.
+                        </P>
+                        <P>*  This Dashboard can save 3-4hrs of work for the HR daily.</P>
+                        
+                        <a href="powerbip2.pbix" target="_blank" class="links">DASHBOARD</a>
+                        </div>
+                        
+                        
+                </div>
+                
+                <div class="vertical">
+                    <img class="image-top" src="img.png" alt="">
+                    <div class="vertical-title">*  ACADEMIC PROJECT</div>
+                    <div class="vertical-title2">HEAT INTEGRATION IN REACTIVE BATCH DISTILLATION: THERMO ECONOMIC ANALYSIS</div>
+                    <div class="vertical-title3">under the guidance of Dr.G.Uday bhaskar babu(Associate professor,NITW)</div>
+                    <div class="vertical-desc">
+                        <P>*  Implemented Bottom Flashing and Vapour Recompression model techniques in Conventional Reactive Batch Distillation for production of Butyl Acetate to improve energy savings and total annual cost.</P>
+                       <!-- <a href="End_Grp_9 (1)-2.pptx" target="_blank">PPT</a>
+                        <P></P>
+                        <a href="Report_Final_grp_9 (2).docx" target="_blank">REPORT</a>
+                       -->
+                     </div>
+                    
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Gelli's Developer portfolio</h3>
+            </div>
+            
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_rights">Copyright &#169;  gellisportfolio.com   |   All rights reserved </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Final Year Chemical Engineering Student.'],
+          typeSpeed: 50,
+        });
+      </script>
+</body>
+</html>
